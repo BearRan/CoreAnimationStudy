@@ -33,7 +33,8 @@
                      @"AnchorPointEXVC",
                      @"ZPositionViewController",
                      @"HitTestViewController",
-                     @"BorderViewController"];
+                     @"BorderViewController",
+                     @"ShadowTestVC"];
 }
 
 - (void)createUI
