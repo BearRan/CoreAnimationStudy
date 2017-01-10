@@ -34,7 +34,9 @@
                      @"ZPositionViewController",
                      @"HitTestViewController",
                      @"BorderViewController",
-                     @"ShadowTestVC"];
+                     @"ShadowTestVC",
+                     @"ShadowPathTestVC",
+                     @"MaskLayerTestVC"];
 }
 
 - (void)createUI

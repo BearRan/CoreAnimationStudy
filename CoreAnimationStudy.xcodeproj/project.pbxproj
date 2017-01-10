@@ -13,6 +13,8 @@
 		182D93ED1E2513EC001E3615 /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93EC1E2513EC001E3615 /* BorderViewController.m */; };
 		182D93F01E251622001E3615 /* ContentImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93EF1E251622001E3615 /* ContentImageViewController.m */; };
 		182D93F31E251B6C001E3615 /* ShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F21E251B6C001E3615 /* ShadowTestVC.m */; };
+		182D93F61E251DB9001E3615 /* ShadowPathTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */; };
+		182D93F91E25217C001E3615 /* MaskLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F81E25217C001E3615 /* MaskLayerTestVC.m */; };
 		18D1FF4D1DFEEB8300971C4B /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D1FF4C1DFEEB8300971C4B /* AnchorPointEXVC.m */; };
 		18D8B63E1DDA984400C6545D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B63D1DDA984400C6545D /* main.m */; };
 		18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B6401DDA984400C6545D /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 		182D93EF1E251622001E3615 /* ContentImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentImageViewController.m; sourceTree = "<group>"; };
 		182D93F11E251B6C001E3615 /* ShadowTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowTestVC.h; sourceTree = "<group>"; };
 		182D93F21E251B6C001E3615 /* ShadowTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowTestVC.m; sourceTree = "<group>"; };
+		182D93F41E251DB9001E3615 /* ShadowPathTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowPathTestVC.h; sourceTree = "<group>"; };
+		182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowPathTestVC.m; sourceTree = "<group>"; };
+		182D93F71E25217C001E3615 /* MaskLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskLayerTestVC.h; sourceTree = "<group>"; };
+		182D93F81E25217C001E3615 /* MaskLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskLayerTestVC.m; sourceTree = "<group>"; };
 		18D1FF4B1DFEEB8300971C4B /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
 		18D1FF4C1DFEEB8300971C4B /* AnchorPointEXVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorPointEXVC.m; sourceTree = "<group>"; };
 		18D8B6391DDA984400C6545D /* CoreAnimationStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +111,10 @@
 				182D93EC1E2513EC001E3615 /* BorderViewController.m */,
 				182D93F11E251B6C001E3615 /* ShadowTestVC.h */,
 				182D93F21E251B6C001E3615 /* ShadowTestVC.m */,
+				182D93F41E251DB9001E3615 /* ShadowPathTestVC.h */,
+				182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */,
+				182D93F71E25217C001E3615 /* MaskLayerTestVC.h */,
+				182D93F81E25217C001E3615 /* MaskLayerTestVC.m */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -265,7 +275,9 @@
 			files = (
 				181939991E0B673300FAEEF0 /* HitTestViewController.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
+				182D93F91E25217C001E3615 /* MaskLayerTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
+				182D93F61E251DB9001E3615 /* ShadowPathTestVC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				18D8B63E1DDA984400C6545D /* main.m in Sources */,
 				182D93F01E251622001E3615 /* ContentImageViewController.m in Sources */,
