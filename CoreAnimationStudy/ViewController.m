@@ -29,9 +29,11 @@
 
 - (void)dataArray
 {
-    _dataVCArray = @[@"AnchorPointEXVC",
+    _dataVCArray = @[@"ContentImageViewController",
+                     @"AnchorPointEXVC",
                      @"ZPositionViewController",
-                     @"HitTestViewController"];
+                     @"HitTestViewController",
+                     @"BorderViewController"];
 }
 
 - (void)createUI

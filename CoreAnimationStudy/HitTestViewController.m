@@ -56,6 +56,11 @@
         }
     }
     
+    //  hitTest
+    CGPoint hitPoint = [[touches anyObject] locationInView:self.view];
+    CALayer *layer = [_layerContainerView.layer hitTest:hitPoint];
+    
+    NSLog(@"layer:%@", layer);
 }
 
 - (void)didReceiveMemoryWarning {
