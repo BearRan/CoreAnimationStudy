@@ -30,7 +30,7 @@
 
 - (void)createUI
 {
-    haveAlphaImage = [UIImage imageNamed:@"testImage_MagnifyGlass"];
+    haveAlphaImage = [UIImage imageNamed:@"image3_halfAlpha"];
     testImage = [UIImage imageNamed:@"image2"];
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
