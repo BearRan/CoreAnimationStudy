@@ -38,7 +38,8 @@
                      @"ShadowPathTestVC",
                      @"MaskLayerTestVC",
                      @"FilterTestVC",
-                     @"GroupOpacityVC"];
+                     @"GroupOpacityVC",
+                     @"CAAffineTransformVC"];
 }
 
 - (void)createUI

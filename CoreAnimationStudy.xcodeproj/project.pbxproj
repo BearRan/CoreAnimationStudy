@@ -18,6 +18,7 @@
 		1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB4C1E30FD7900CBC21F /* ShadowPathTestVC.m */; };
 		1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB4E1E30FD7900CBC21F /* ShadowTestVC.m */; };
 		1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB501E30FD7900CBC21F /* ZPositionViewController.m */; };
+		1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB5E1E30FDE000CBC21F /* CAAffineTransformVC.m */; };
 		18D8B63E1DDA984400C6545D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B63D1DDA984400C6545D /* main.m */; };
 		18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B6401DDA984400C6545D /* AppDelegate.m */; };
 		18D8B6441DDA984400C6545D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B6431DDA984400C6545D /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		1831CB4F1E30FD7900CBC21F /* ZPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPositionViewController.h; sourceTree = "<group>"; };
 		1831CB501E30FD7900CBC21F /* ZPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPositionViewController.m; sourceTree = "<group>"; };
 		1831CB5C1E30FDB300CBC21F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1831CB5D1E30FDE000CBC21F /* CAAffineTransformVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAffineTransformVC.h; sourceTree = "<group>"; };
+		1831CB5E1E30FDE000CBC21F /* CAAffineTransformVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAffineTransformVC.m; sourceTree = "<group>"; };
 		18D8B6391DDA984400C6545D /* CoreAnimationStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D8B63D1DDA984400C6545D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18D8B63F1DDA984400C6545D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 		1831CB511E30FD7900CBC21F /* Chapter4 */ = {
 			isa = PBXGroup;
 			children = (
+				1831CB5D1E30FDE000CBC21F /* CAAffineTransformVC.h */,
+				1831CB5E1E30FDE000CBC21F /* CAAffineTransformVC.m */,
 			);
 			path = Chapter4;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
+				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,
 				18D8B63E1DDA984400C6545D /* main.m in Sources */,
