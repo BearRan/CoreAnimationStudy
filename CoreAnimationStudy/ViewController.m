@@ -36,7 +36,9 @@
                      @"BorderViewController",
                      @"ShadowTestVC",
                      @"ShadowPathTestVC",
-                     @"MaskLayerTestVC"];
+                     @"MaskLayerTestVC",
+                     @"FilterTestVC",
+                     @"GroupOpacityVC"];
 }
 
 - (void)createUI

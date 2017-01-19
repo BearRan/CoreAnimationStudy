@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181939901E0B64B100FAEEF0 /* ZPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819398F1E0B64B100FAEEF0 /* ZPositionViewController.m */; };
 		181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181939921E0B654900FAEEF0 /* BaseViewController.m */; };
-		181939991E0B673300FAEEF0 /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181939981E0B673300FAEEF0 /* HitTestViewController.m */; };
-		182D93ED1E2513EC001E3615 /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93EC1E2513EC001E3615 /* BorderViewController.m */; };
-		182D93F01E251622001E3615 /* ContentImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93EF1E251622001E3615 /* ContentImageViewController.m */; };
-		182D93F31E251B6C001E3615 /* ShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F21E251B6C001E3615 /* ShadowTestVC.m */; };
-		182D93F61E251DB9001E3615 /* ShadowPathTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */; };
-		182D93F91E25217C001E3615 /* MaskLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D93F81E25217C001E3615 /* MaskLayerTestVC.m */; };
-		18D1FF4D1DFEEB8300971C4B /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D1FF4C1DFEEB8300971C4B /* AnchorPointEXVC.m */; };
+		1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */; };
+		1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3F1E30FD7900CBC21F /* BorderViewController.m */; };
+		1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB411E30FD7900CBC21F /* ContentImageViewController.m */; };
+		1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB431E30FD7900CBC21F /* FilterTestVC.m */; };
+		1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB451E30FD7900CBC21F /* GroupOpacityVC.m */; };
+		1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB471E30FD7900CBC21F /* HitTestViewController.m */; };
+		1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB491E30FD7900CBC21F /* MaskLayerTestVC.m */; };
+		1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB4C1E30FD7900CBC21F /* ShadowPathTestVC.m */; };
+		1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB4E1E30FD7900CBC21F /* ShadowTestVC.m */; };
+		1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB501E30FD7900CBC21F /* ZPositionViewController.m */; };
 		18D8B63E1DDA984400C6545D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B63D1DDA984400C6545D /* main.m */; };
 		18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B6401DDA984400C6545D /* AppDelegate.m */; };
 		18D8B6441DDA984400C6545D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B6431DDA984400C6545D /* ViewController.m */; };
@@ -26,24 +28,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1819398E1E0B64B100FAEEF0 /* ZPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPositionViewController.h; sourceTree = "<group>"; };
-		1819398F1E0B64B100FAEEF0 /* ZPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPositionViewController.m; sourceTree = "<group>"; };
 		181939911E0B654900FAEEF0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		181939921E0B654900FAEEF0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		181939971E0B673300FAEEF0 /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
-		181939981E0B673300FAEEF0 /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
-		182D93EB1E2513EC001E3615 /* BorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderViewController.h; sourceTree = "<group>"; };
-		182D93EC1E2513EC001E3615 /* BorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderViewController.m; sourceTree = "<group>"; };
-		182D93EE1E251622001E3615 /* ContentImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentImageViewController.h; sourceTree = "<group>"; };
-		182D93EF1E251622001E3615 /* ContentImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentImageViewController.m; sourceTree = "<group>"; };
-		182D93F11E251B6C001E3615 /* ShadowTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowTestVC.h; sourceTree = "<group>"; };
-		182D93F21E251B6C001E3615 /* ShadowTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowTestVC.m; sourceTree = "<group>"; };
-		182D93F41E251DB9001E3615 /* ShadowPathTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowPathTestVC.h; sourceTree = "<group>"; };
-		182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowPathTestVC.m; sourceTree = "<group>"; };
-		182D93F71E25217C001E3615 /* MaskLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskLayerTestVC.h; sourceTree = "<group>"; };
-		182D93F81E25217C001E3615 /* MaskLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskLayerTestVC.m; sourceTree = "<group>"; };
-		18D1FF4B1DFEEB8300971C4B /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
-		18D1FF4C1DFEEB8300971C4B /* AnchorPointEXVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorPointEXVC.m; sourceTree = "<group>"; };
+		1831CB3C1E30FD7900CBC21F /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
+		1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnchorPointEXVC.m; sourceTree = "<group>"; };
+		1831CB3E1E30FD7900CBC21F /* BorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderViewController.h; sourceTree = "<group>"; };
+		1831CB3F1E30FD7900CBC21F /* BorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderViewController.m; sourceTree = "<group>"; };
+		1831CB401E30FD7900CBC21F /* ContentImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentImageViewController.h; sourceTree = "<group>"; };
+		1831CB411E30FD7900CBC21F /* ContentImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentImageViewController.m; sourceTree = "<group>"; };
+		1831CB421E30FD7900CBC21F /* FilterTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterTestVC.h; sourceTree = "<group>"; };
+		1831CB431E30FD7900CBC21F /* FilterTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterTestVC.m; sourceTree = "<group>"; };
+		1831CB441E30FD7900CBC21F /* GroupOpacityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupOpacityVC.h; sourceTree = "<group>"; };
+		1831CB451E30FD7900CBC21F /* GroupOpacityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupOpacityVC.m; sourceTree = "<group>"; };
+		1831CB461E30FD7900CBC21F /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		1831CB471E30FD7900CBC21F /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		1831CB481E30FD7900CBC21F /* MaskLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskLayerTestVC.h; sourceTree = "<group>"; };
+		1831CB491E30FD7900CBC21F /* MaskLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskLayerTestVC.m; sourceTree = "<group>"; };
+		1831CB4B1E30FD7900CBC21F /* ShadowPathTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowPathTestVC.h; sourceTree = "<group>"; };
+		1831CB4C1E30FD7900CBC21F /* ShadowPathTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowPathTestVC.m; sourceTree = "<group>"; };
+		1831CB4D1E30FD7900CBC21F /* ShadowTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowTestVC.h; sourceTree = "<group>"; };
+		1831CB4E1E30FD7900CBC21F /* ShadowTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowTestVC.m; sourceTree = "<group>"; };
+		1831CB4F1E30FD7900CBC21F /* ZPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPositionViewController.h; sourceTree = "<group>"; };
+		1831CB501E30FD7900CBC21F /* ZPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPositionViewController.m; sourceTree = "<group>"; };
+		1831CB5C1E30FDB300CBC21F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18D8B6391DDA984400C6545D /* CoreAnimationStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D8B63D1DDA984400C6545D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18D8B63F1DDA984400C6545D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +79,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1831CB3B1E30FD7900CBC21F /* Chapter1-3 */ = {
+			isa = PBXGroup;
+			children = (
+				1831CB3C1E30FD7900CBC21F /* AnchorPointEXVC.h */,
+				1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */,
+				1831CB3E1E30FD7900CBC21F /* BorderViewController.h */,
+				1831CB3F1E30FD7900CBC21F /* BorderViewController.m */,
+				1831CB401E30FD7900CBC21F /* ContentImageViewController.h */,
+				1831CB411E30FD7900CBC21F /* ContentImageViewController.m */,
+				1831CB421E30FD7900CBC21F /* FilterTestVC.h */,
+				1831CB431E30FD7900CBC21F /* FilterTestVC.m */,
+				1831CB441E30FD7900CBC21F /* GroupOpacityVC.h */,
+				1831CB451E30FD7900CBC21F /* GroupOpacityVC.m */,
+				1831CB461E30FD7900CBC21F /* HitTestViewController.h */,
+				1831CB471E30FD7900CBC21F /* HitTestViewController.m */,
+				1831CB481E30FD7900CBC21F /* MaskLayerTestVC.h */,
+				1831CB491E30FD7900CBC21F /* MaskLayerTestVC.m */,
+				1831CB4B1E30FD7900CBC21F /* ShadowPathTestVC.h */,
+				1831CB4C1E30FD7900CBC21F /* ShadowPathTestVC.m */,
+				1831CB4D1E30FD7900CBC21F /* ShadowTestVC.h */,
+				1831CB4E1E30FD7900CBC21F /* ShadowTestVC.m */,
+				1831CB4F1E30FD7900CBC21F /* ZPositionViewController.h */,
+				1831CB501E30FD7900CBC21F /* ZPositionViewController.m */,
+			);
+			path = "Chapter1-3";
+			sourceTree = "<group>";
+		};
+		1831CB511E30FD7900CBC21F /* Chapter4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chapter4;
+			sourceTree = "<group>";
+		};
 		18D8B6301DDA984400C6545D = {
 			isa = PBXGroup;
 			children = (
@@ -99,22 +140,9 @@
 				18D8B6431DDA984400C6545D /* ViewController.m */,
 				181939911E0B654900FAEEF0 /* BaseViewController.h */,
 				181939921E0B654900FAEEF0 /* BaseViewController.m */,
-				182D93EE1E251622001E3615 /* ContentImageViewController.h */,
-				182D93EF1E251622001E3615 /* ContentImageViewController.m */,
-				18D1FF4B1DFEEB8300971C4B /* AnchorPointEXVC.h */,
-				18D1FF4C1DFEEB8300971C4B /* AnchorPointEXVC.m */,
-				1819398E1E0B64B100FAEEF0 /* ZPositionViewController.h */,
-				1819398F1E0B64B100FAEEF0 /* ZPositionViewController.m */,
-				181939971E0B673300FAEEF0 /* HitTestViewController.h */,
-				181939981E0B673300FAEEF0 /* HitTestViewController.m */,
-				182D93EB1E2513EC001E3615 /* BorderViewController.h */,
-				182D93EC1E2513EC001E3615 /* BorderViewController.m */,
-				182D93F11E251B6C001E3615 /* ShadowTestVC.h */,
-				182D93F21E251B6C001E3615 /* ShadowTestVC.m */,
-				182D93F41E251DB9001E3615 /* ShadowPathTestVC.h */,
-				182D93F51E251DB9001E3615 /* ShadowPathTestVC.m */,
-				182D93F71E25217C001E3615 /* MaskLayerTestVC.h */,
-				182D93F81E25217C001E3615 /* MaskLayerTestVC.m */,
+				1831CB5C1E30FDB300CBC21F /* PrefixHeader.pch */,
+				1831CB3B1E30FD7900CBC21F /* Chapter1-3 */,
+				1831CB511E30FD7900CBC21F /* Chapter4 */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -273,18 +301,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181939991E0B673300FAEEF0 /* HitTestViewController.m in Sources */,
+				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
+				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
-				182D93F91E25217C001E3615 /* MaskLayerTestVC.m in Sources */,
+				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
-				182D93F61E251DB9001E3615 /* ShadowPathTestVC.m in Sources */,
+				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
+				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
+				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
+				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,
 				18D8B63E1DDA984400C6545D /* main.m in Sources */,
-				182D93F01E251622001E3615 /* ContentImageViewController.m in Sources */,
-				181939901E0B64B100FAEEF0 /* ZPositionViewController.m in Sources */,
-				182D93ED1E2513EC001E3615 /* BorderViewController.m in Sources */,
-				182D93F31E251B6C001E3615 /* ShadowTestVC.m in Sources */,
-				18D1FF4D1DFEEB8300971C4B /* AnchorPointEXVC.m in Sources */,
+				1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */,
+				1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */,
+				1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
