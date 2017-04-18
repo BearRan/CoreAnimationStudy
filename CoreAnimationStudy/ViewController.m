@@ -29,19 +29,24 @@
 
 - (void)dataArray
 {
-    _dataVCArray = @[@"ContentImageViewController",
-                     @"AnchorPointEXVC",
-                     @"ZPositionViewController",
-                     @"HitTestViewController",
-                     @"BorderViewController",
-                     @"ShadowTestVC",
-                     @"ShadowPathTestVC",
-                     @"MaskLayerTestVC",
-                     @"FilterTestVC",
-                     @"GroupOpacityVC",
+    _dataVCArray = @[
+//                     @"ContentImageViewController",
+//                     @"AnchorPointEXVC",
+//                     @"ZPositionViewController",
+//                     @"HitTestViewController",
+//                     @"BorderViewController",
+//                     @"ShadowTestVC",
+//                     @"ShadowPathTestVC",
+//                     @"MaskLayerTestVC",
+//                     @"FilterTestVC",
+//                     @"GroupOpacityVC",
+                     
+                     //Chapter4
                      @"CAAffineTransformVC",
-                     @"CAReplicatorLayerTestVC",
-                     @"ReflectionTestVC",
+                     @"ComplexTransformViewController",
+                     
+//                     @"CAReplicatorLayerTestVC",
+//                     @"ReflectionTestVC",
                      ];
 }
 

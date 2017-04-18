@@ -24,6 +24,11 @@
     [self.view addSubview:reflectionView];
     [reflectionView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
     
+    UIImage *testImage2 = [UIImage imageNamed:@"image2"];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(-150, 0, 100, 100)];
+    imageView2.image = testImage2;
+    [reflectionView addSubview:imageView2];
+    
     UIImage *testImage = [UIImage imageNamed:@"image2"];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     imageView.image = testImage;
