@@ -39,7 +39,10 @@
                      @"MaskLayerTestVC",
                      @"FilterTestVC",
                      @"GroupOpacityVC",
-                     @"CAAffineTransformVC"];
+                     @"CAAffineTransformVC",
+                     @"CAReplicatorLayerTestVC",
+                     @"ReflectionTestVC",
+                     ];
 }
 
 - (void)createUI

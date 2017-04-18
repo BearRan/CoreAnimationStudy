@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */; };
+		09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B11EA597430064D100 /* ReflectionTestVC.m */; };
+		09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B41EA5977C0064D100 /* ReflectionView.m */; };
 		181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181939921E0B654900FAEEF0 /* BaseViewController.m */; };
 		1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */; };
 		1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3F1E30FD7900CBC21F /* BorderViewController.m */; };
@@ -29,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FAC1AD1EA593C50064D100 /* CAReplicatorLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerTestVC.h; sourceTree = "<group>"; };
+		09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerTestVC.m; sourceTree = "<group>"; };
+		09FAC1B01EA597430064D100 /* ReflectionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionTestVC.h; sourceTree = "<group>"; };
+		09FAC1B11EA597430064D100 /* ReflectionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionTestVC.m; sourceTree = "<group>"; };
+		09FAC1B31EA5977C0064D100 /* ReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionView.h; sourceTree = "<group>"; };
+		09FAC1B41EA5977C0064D100 /* ReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionView.m; sourceTree = "<group>"; };
 		181939911E0B654900FAEEF0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		181939921E0B654900FAEEF0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		1831CB3C1E30FD7900CBC21F /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
@@ -82,6 +91,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09FAC1A91EA593700064D100 /* Chapter6 */ = {
+			isa = PBXGroup;
+			children = (
+				09FAC1AD1EA593C50064D100 /* CAReplicatorLayerTestVC.h */,
+				09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */,
+				09FAC1B61EA597830064D100 /* ReflectionTest */,
+			);
+			name = Chapter6;
+			sourceTree = "<group>";
+		};
+		09FAC1B61EA597830064D100 /* ReflectionTest */ = {
+			isa = PBXGroup;
+			children = (
+				09FAC1B01EA597430064D100 /* ReflectionTestVC.h */,
+				09FAC1B11EA597430064D100 /* ReflectionTestVC.m */,
+				09FAC1B31EA5977C0064D100 /* ReflectionView.h */,
+				09FAC1B41EA5977C0064D100 /* ReflectionView.m */,
+			);
+			name = ReflectionTest;
+			sourceTree = "<group>";
+		};
 		1831CB3B1E30FD7900CBC21F /* Chapter1-3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +178,7 @@
 				1831CB5C1E30FDB300CBC21F /* PrefixHeader.pch */,
 				1831CB3B1E30FD7900CBC21F /* Chapter1-3 */,
 				1831CB511E30FD7900CBC21F /* Chapter4 */,
+				09FAC1A91EA593700064D100 /* Chapter6 */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -309,6 +340,7 @@
 				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
+				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
@@ -317,7 +349,9 @@
 				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,
+				09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */,
 				18D8B63E1DDA984400C6545D /* main.m in Sources */,
+				09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */,
 				1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */,
 				1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */,
 				1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */,
