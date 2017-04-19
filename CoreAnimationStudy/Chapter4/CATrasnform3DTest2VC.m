@@ -28,6 +28,7 @@
     
     for (int i = 0; i < 4; i++) {
         UIImageView *_imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image2"]];
+//        _imageView.layer.anchorPoint = CGPointMake(0.9, 0.7);
         _imageView.frame = CGRectMake(0, 0, 160, 160);
         [self.view addSubview:_imageView];
         [_imageView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
