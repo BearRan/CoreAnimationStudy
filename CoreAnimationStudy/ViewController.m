@@ -44,6 +44,9 @@
                      //Chapter4
                      @"CAAffineTransformVC",
                      @"ComplexTransformViewController",
+                     @"CGAffineTransformShearTestVC",
+                     @"CATrasnform3DTestVC",
+                     @"CATrasnform3DTest2VC",
                      
 //                     @"CAReplicatorLayerTestVC",
 //                     @"ReflectionTestVC",

@@ -11,6 +11,9 @@
 		09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B11EA597430064D100 /* ReflectionTestVC.m */; };
 		09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B41EA5977C0064D100 /* ReflectionView.m */; };
 		09FAC1B91EA664FA0064D100 /* ComplexTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B81EA664FA0064D100 /* ComplexTransformViewController.m */; };
+		09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1BB1EA6E1440064D100 /* CGAffineTransformShearTestVC.m */; };
+		09FAC1BF1EA6E2CB0064D100 /* CATrasnform3DTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */; };
+		09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */; };
 		181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181939921E0B654900FAEEF0 /* BaseViewController.m */; };
 		1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */; };
 		1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3F1E30FD7900CBC21F /* BorderViewController.m */; };
@@ -41,6 +44,12 @@
 		09FAC1B41EA5977C0064D100 /* ReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionView.m; sourceTree = "<group>"; };
 		09FAC1B71EA664F90064D100 /* ComplexTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexTransformViewController.h; sourceTree = "<group>"; };
 		09FAC1B81EA664FA0064D100 /* ComplexTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexTransformViewController.m; sourceTree = "<group>"; };
+		09FAC1BA1EA6E1440064D100 /* CGAffineTransformShearTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGAffineTransformShearTestVC.h; sourceTree = "<group>"; };
+		09FAC1BB1EA6E1440064D100 /* CGAffineTransformShearTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGAffineTransformShearTestVC.m; sourceTree = "<group>"; };
+		09FAC1BD1EA6E2CB0064D100 /* CATrasnform3DTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATrasnform3DTestVC.h; sourceTree = "<group>"; };
+		09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATrasnform3DTestVC.m; sourceTree = "<group>"; };
+		09FAC1C01EA6E6F10064D100 /* CATrasnform3DTest2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATrasnform3DTest2VC.h; sourceTree = "<group>"; };
+		09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATrasnform3DTest2VC.m; sourceTree = "<group>"; };
 		181939911E0B654900FAEEF0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		181939921E0B654900FAEEF0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		1831CB3C1E30FD7900CBC21F /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
@@ -142,14 +151,21 @@
 			path = "Chapter1-3";
 			sourceTree = "<group>";
 		};
-		1831CB511E30FD7900CBC21F /* Chapter4 */ = {
+		1831CB511E30FD7900CBC21F /* Chapter4_Transform */ = {
 			isa = PBXGroup;
 			children = (
 				1831CB5D1E30FDE000CBC21F /* CAAffineTransformVC.h */,
 				1831CB5E1E30FDE000CBC21F /* CAAffineTransformVC.m */,
 				09FAC1B71EA664F90064D100 /* ComplexTransformViewController.h */,
 				09FAC1B81EA664FA0064D100 /* ComplexTransformViewController.m */,
+				09FAC1BA1EA6E1440064D100 /* CGAffineTransformShearTestVC.h */,
+				09FAC1BB1EA6E1440064D100 /* CGAffineTransformShearTestVC.m */,
+				09FAC1BD1EA6E2CB0064D100 /* CATrasnform3DTestVC.h */,
+				09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */,
+				09FAC1C01EA6E6F10064D100 /* CATrasnform3DTest2VC.h */,
+				09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */,
 			);
+			name = Chapter4_Transform;
 			path = Chapter4;
 			sourceTree = "<group>";
 		};
@@ -182,7 +198,7 @@
 				181939921E0B654900FAEEF0 /* BaseViewController.m */,
 				1831CB5C1E30FDB300CBC21F /* PrefixHeader.pch */,
 				1831CB3B1E30FD7900CBC21F /* Chapter1-3 */,
-				1831CB511E30FD7900CBC21F /* Chapter4 */,
+				1831CB511E30FD7900CBC21F /* Chapter4_Transform */,
 				09FAC1A91EA593700064D100 /* Chapter6 */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
@@ -342,12 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */,
 				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
+				09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */,
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
@@ -359,6 +377,7 @@
 				09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */,
 				1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */,
 				09FAC1B91EA664FA0064D100 /* ComplexTransformViewController.m in Sources */,
+				09FAC1BF1EA6E2CB0064D100 /* CATrasnform3DTestVC.m in Sources */,
 				1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */,
 				1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */,
 			);
