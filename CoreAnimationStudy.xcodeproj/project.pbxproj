@@ -14,6 +14,7 @@
 		09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1BB1EA6E1440064D100 /* CGAffineTransformShearTestVC.m */; };
 		09FAC1BF1EA6E2CB0064D100 /* CATrasnform3DTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */; };
 		09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */; };
+		09FAC1FC1EA989A80064D100 /* CATransform3DTest3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1FB1EA989A80064D100 /* CATransform3DTest3VC.m */; };
 		181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181939921E0B654900FAEEF0 /* BaseViewController.m */; };
 		1831CB521E30FD7900CBC21F /* AnchorPointEXVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3D1E30FD7900CBC21F /* AnchorPointEXVC.m */; };
 		1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831CB3F1E30FD7900CBC21F /* BorderViewController.m */; };
@@ -50,6 +51,8 @@
 		09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATrasnform3DTestVC.m; sourceTree = "<group>"; };
 		09FAC1C01EA6E6F10064D100 /* CATrasnform3DTest2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATrasnform3DTest2VC.h; sourceTree = "<group>"; };
 		09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATrasnform3DTest2VC.m; sourceTree = "<group>"; };
+		09FAC1FA1EA989A80064D100 /* CATransform3DTest3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DTest3VC.h; sourceTree = "<group>"; };
+		09FAC1FB1EA989A80064D100 /* CATransform3DTest3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DTest3VC.m; sourceTree = "<group>"; };
 		181939911E0B654900FAEEF0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		181939921E0B654900FAEEF0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		1831CB3C1E30FD7900CBC21F /* AnchorPointEXVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnchorPointEXVC.h; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 				09FAC1BE1EA6E2CB0064D100 /* CATrasnform3DTestVC.m */,
 				09FAC1C01EA6E6F10064D100 /* CATrasnform3DTest2VC.h */,
 				09FAC1C11EA6E6F10064D100 /* CATrasnform3DTest2VC.m */,
+				09FAC1FA1EA989A80064D100 /* CATransform3DTest3VC.h */,
+				09FAC1FB1EA989A80064D100 /* CATransform3DTest3VC.m */,
 			);
 			name = Chapter4_Transform;
 			path = Chapter4;
@@ -370,6 +375,7 @@
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
 				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
+				09FAC1FC1EA989A80064D100 /* CATransform3DTest3VC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,
 				09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */,

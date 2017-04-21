@@ -11,6 +11,7 @@
 @interface CATrasnform3DTestVC ()
 {
     UIImageView *_imageView;
+    UIImageView *_imageBackTestView;
 }
 
 @end
@@ -23,14 +24,20 @@
     [self createTestImageV];
 //    [self test3DRotation];
     [self test3DRotationWith_m34];
+    [self testRotationBack];
 }
 
 - (void)createTestImageV
 {
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image2"]];
-    _imageView.frame = CGRectMake(0, 0, 200, 200);
+    _imageView.frame = CGRectMake(0, 0, 150, 150);
     [self.view addSubview:_imageView];
-    [_imageView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    
+    _imageBackTestView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image2"]];
+    _imageBackTestView.frame = CGRectMake(0, 0, 150, 150);
+    [self.view addSubview:_imageBackTestView];
+    
+    [UIView BearAutoLayViewArray:(NSMutableArray *)@[_imageView, _imageBackTestView] layoutAxis:kLAYOUT_AXIS_X center:YES gapDistance:50];
 }
 
 - (void)test3DRotation
@@ -45,6 +52,15 @@
     transform.m34 = - 1.0 / 500;
     transform = CATransform3DRotate(transform, M_PI_4, 0, 1, 0);
     _imageView.layer.transform = transform;
+}
+
+- (void)testRotationBack
+{
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
+    _imageBackTestView.layer.transform = transform;
+    
+    _imageBackTestView.layer.doubleSided = NO;
 }
 
 - (void)didReceiveMemoryWarning {
