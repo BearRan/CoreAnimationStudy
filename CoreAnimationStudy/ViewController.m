@@ -49,6 +49,7 @@
                      @"CATrasnform3DTest2VC",
                      @"CATransform3DTest3VC",
                      @"CubicTestVC",
+                     @"CubicLayerTestVC",
                      
 //                     @"CAReplicatorLayerTestVC",
 //                     @"ReflectionTestVC",

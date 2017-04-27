@@ -1,1 +1,1 @@
-../../../BearSkill/Pod/Classes/UI&Extend/UILabel+BearSet.h
+../../../BearSkill/Pod/UIAndExtend/UILabel+BearSet.h

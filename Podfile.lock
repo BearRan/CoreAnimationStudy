@@ -1,12 +1,32 @@
 PODS:
-  - BearSkill (0.2.0)
+  - BearSkill (0.2.0):
+    - BearSkill/AttributeString (= 0.2.0)
+    - BearSkill/BearDefines (= 0.2.0)
+    - BearSkill/Constants (= 0.2.0)
+    - BearSkill/Layout (= 0.2.0)
+    - BearSkill/UIAndExtend (= 0.2.0)
+  - BearSkill/AttributeString (0.2.0)
+  - BearSkill/BearDefines (0.2.0)
+  - BearSkill/Constants (0.2.0)
+  - BearSkill/Layout (0.2.0)
+  - BearSkill/UIAndExtend (0.2.0)
 
 DEPENDENCIES:
-  - BearSkill
+  - BearSkill (from `https://github.com/BearRan/BearSkill.git`, commit `c33d282`)
+
+EXTERNAL SOURCES:
+  BearSkill:
+    :commit: c33d282
+    :git: https://github.com/BearRan/BearSkill.git
+
+CHECKOUT OPTIONS:
+  BearSkill:
+    :commit: c33d282
+    :git: https://github.com/BearRan/BearSkill.git
 
 SPEC CHECKSUMS:
-  BearSkill: 180b4d49cfae7466f65402eabcdb8d5a28665314
+  BearSkill: 4ff376466be491e7e1f91ad38f5d871e3b7feaf5
 
-PODFILE CHECKSUM: b702bb2f5f0d3c3edb37248adc09d6bcc778cdc0
+PODFILE CHECKSUM: 6d3d4d08800abc5c14b36d4e84a7dd2a7c22f85a
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

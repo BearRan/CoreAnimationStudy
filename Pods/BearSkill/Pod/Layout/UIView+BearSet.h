@@ -7,28 +7,36 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, kAXIS) {
     kAXIS_Y,
     kAXIS_X,
     kAXIS_X_Y,
-}kAXIS;
+};
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, kLAYOUT_AXIS) {
     kLAYOUT_AXIS_Y,
     kLAYOUT_AXIS_X,
-}kLAYOUT_AXIS;
+};
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, kDIRECTION) {
     kDIR_LEFT,
     kDIR_RIGHT,
     kDIR_UP,
     kDIR_DOWN,
-}kDIRECTION;
+};
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, SetNeedWHSort) {
     kSetNeed_Width,
     kSetNeed_Height,
-}SetNeedWHSort;
+};
+
+//  设置对齐类型
+typedef NS_ENUM(NSUInteger, SetAlignmentType) {
+    kSetAlignmentType_Idle,     //  不处理对齐方式
+    kSetAlignmentType_Center,   //  剧中对齐
+    kSetAlignmentType_Start,    //  上／左对齐
+    kSetAlignmentType_End,      //  下／右对齐
+};
 
 //  offParameter结构体
 struct OffPara
@@ -76,6 +84,8 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
  *  普通的方法
  */
 
+- (void)removeAllSubViews;
+
 // 描边
 - (void)setLine:(UIColor *)color cornerRadius:(NSUInteger)cornerRadius borderWidth:(CGFloat)borderWidth;
 
@@ -91,14 +101,44 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
 // 自定义底部分割线View
 - (void)setMySeparatorLine:(CGFloat)offStart offEnd:(CGFloat)offEnd lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor;
 
-// 通过view，画任意方向的线
-- (void)drawLine:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor;
-
+/**
+ *  画线--View
+ *  通过view，画横向／纵向的线
+ *
+ *  @param startPoint 起点
+ *  @param endPoint   终点
+ *  @param lineWidth  线宽
+ *  @param lineColor  线颜色
+ *
+ *  @return view上绘制的线view
+ */
+- (UIView *)drawLine:(CGPoint)startPoint
+            endPoint:(CGPoint)endPoint
+           lineWidth:(CGFloat)lineWidth
+           lineColor:(UIColor *)lineColor;
 
 // 通过layer，画任意方向的线
 - (void)drawLineWithLayer:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor;
 
+/**
+ *  在View中绘制虚线
+ *
+ *  @param axis        横向／纵向绘制虚线
+ *  @param dashColor   虚线颜色
+ *  @param dashPattern 虚线间距数组，默认@[@3, @3]
+ */
+- (void)drawDashLineWithAxis:(kLAYOUT_AXIS)axis
+                   dashColor:(UIColor *)dashColor
+                 dashPattern:(NSArray<NSNumber *> *)dashPattern;
 
+/**
+ 在layer上添加分离图片
+ 
+ @param image 图片
+ @param rect 图片裁剪比例 CGRectMake(0, 0, 0.5, 0.5)
+ @param contentsGravity 图片填充模式
+ */
+- (void)addSpriteImage:(UIImage *)image withContentRect:(CGRect)rect contentsGravity:(NSString *)contentsGravity;
 
 
 
@@ -144,6 +184,7 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
 - (void)setWidth_DonotMoveCenter:(CGFloat)width;
 - (void)setHeight_DonotMoveCenter:(CGFloat)height;
 - (void)setSize_DonotMoveCenter:(CGSize)size;
+- (void)sizeToFit_DonotMoveCenter;
 - (void)sizeToFit_DonotMoveSide:(kDIRECTION)dir centerRemain:(BOOL)centerRemain;
 
 
@@ -176,7 +217,7 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
 /**
  *  view与view的相对位置
  */
-- (void)BearSetRelativeLayoutWithDirection:(kDIRECTION)direction destinationView:(UIView *)destinationView parentRelation:(BOOL)parentRelation distance:(CGFloat)distance center:(BOOL)center;
+- (void)BearSetRelativeLayoutWithDirection:(kDIRECTION)direction destinationView:(UIView *)destinationView parentRelation:(BOOL)parentRelation distance:(CGFloat)distance center:(BOOL)center; 
 
 
 /**
@@ -184,6 +225,8 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
  */
 - (void)BearSetRelativeLayoutWithDirection:(kDIRECTION)direction destinationView:(UIView *)destinationView parentRelation:(BOOL)parentRelation distance:(CGFloat)distance center:(BOOL)center sizeToFit:(BOOL)sizeToFit;
 
+
+#pragma mark - AutoLay V1
 
 /**
  *  根据子view自动布局 -- 自动计算:起始点，结束点，间距（三值相等）
@@ -224,5 +267,78 @@ GapParaMake(CGFloat gapDistance, BOOL autoCalu)
  *  说明： 在父类view尺寸不等于需求尺寸时，无法自动布局
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center gapAray:(NSArray *)gapArray;
+
+
+
+#pragma mark - AutoLay V2
+
+/**
+ *  根据子view自动布局 -- 自动计算:起始点，结束点，间距（三值相等）
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis;
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:起始点，结束点; -- 自动计算:间距
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                      offStart:(CGFloat)offStart
+                        offEnd:(CGFloat)offEnd;
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:间距; -- 自动计算:起始点，结束点
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                   gapDistance:(CGFloat)gapDistance;
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:起始点，结束点，间距
+ *  说明： 在父类view尺寸不等于需求尺寸时，会自动变化
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                      offStart:(CGFloat)offStart
+                        offEnd:(CGFloat)offEnd
+                   gapDistance:(CGFloat)gapDistance;
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:gapArray间距比例数组，间距总和
+ *  说明： 在父类view尺寸不等于需求尺寸时，会自动变化
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                       gapAray:(NSArray *)gapArray
+                     gapDisAll:(CGFloat)gapDisAll;
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:gapArray间距比例数组; -- 自动计算：间距总和
+ *  说明： 在父类view尺寸不等于需求尺寸时，无法自动布局
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                       gapAray:(NSArray *)gapArray;
+
 
 @end

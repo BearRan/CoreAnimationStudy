@@ -105,7 +105,7 @@
 //  从URL获取图片
 + (UIImage *)getImageFromURL:(NSString *)imageURL
 {
-    if ([imageURL rangeOfString:@"http://"].location != NSNotFound) {
+    if ([imageURL rangeOfString:@"http://"].location != NSNotFound || [imageURL rangeOfString:@"https://"].location != NSNotFound) {
         __block UIImage *image = [[UIImage alloc] init];
         dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]]];
@@ -184,6 +184,35 @@
     if (failure) {
         failure();
     }
+}
+
+//  延时block
++ (void)delayAfter:(CGFloat)delayTime dealBlock:(void (^)())dealBlock
+{
+    dispatch_time_t timer = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime *NSEC_PER_SEC));
+    dispatch_after(timer, dispatch_get_main_queue(), ^{
+        
+        if (dealBlock) {
+            dealBlock();
+        }
+    });
+}
+
+//  获取随机颜色
++ (UIColor *)randomColor
+{
+    UIColor *randomColor = [self randomColorWithAlpha:1];
+    return randomColor;
+}
+
+//  获取随机颜色
++ (UIColor *)randomColorWithAlpha:(CGFloat)alpha
+{
+    CGFloat r = arc4random() % 255 / 255.0;
+    CGFloat g = arc4random() % 255 / 255.0;
+    CGFloat b = arc4random() % 255 / 255.0;
+    UIColor *randomColor = [UIColor colorWithRed:r green:g blue:b alpha:alpha];
+    return randomColor;
 }
 
 @end

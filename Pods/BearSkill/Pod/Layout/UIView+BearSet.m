@@ -11,6 +11,13 @@
 
 #pragma mark - 界面处理，设置属性，画线的一些方法
 
+- (void)removeAllSubViews
+{
+    for (UIView *subView in self.subviews) {
+        [subView removeFromSuperview];
+    }
+}
+
 // 描边
 - (void)setLine:(UIColor *)color cornerRadius:(NSUInteger)cornerRadius borderWidth:(CGFloat)borderWidth
 {
@@ -104,10 +111,19 @@
 
 /**
  *  画线--View
+ *  通过view，画横向／纵向的线
  *
- *  通过view，画任意方向的线
+ *  @param startPoint 起点
+ *  @param endPoint   终点
+ *  @param lineWidth  线宽
+ *  @param lineColor  线颜色
+ *
+ *  @return view上绘制的线view
  */
-- (void) drawLine:(CGPoint)startPoint endPoint:(CGPoint)endPoint lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor
+- (UIView *)drawLine:(CGPoint)startPoint
+            endPoint:(CGPoint)endPoint
+           lineWidth:(CGFloat)lineWidth
+           lineColor:(UIColor *)lineColor
 {
     UIView *lineView = [[UIView alloc] init];
     lineView.backgroundColor = lineColor;
@@ -124,6 +140,7 @@
     
     [self addSubview:lineView];
     
+    return lineView;
 }
 
 
@@ -162,6 +179,80 @@
     CGContextRestoreGState(context);
     
     [self setNeedsDisplay];
+}
+
+
+/**
+ *  在View中绘制虚线
+ *
+ *  @param axis        横向／纵向绘制虚线
+ *  @param dashColor   虚线颜色
+ *  @param dashPattern 虚线间距数组，默认@[@3, @3]
+ */
+- (void)drawDashLineWithAxis:(kLAYOUT_AXIS)axis
+                   dashColor:(UIColor *)dashColor
+                 dashPattern:(NSArray<NSNumber *> *)dashPattern
+{
+    CAShapeLayer *border = [CAShapeLayer layer];
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    CGFloat centerX = self.width / 2.0;
+    CGFloat centerY = self.height / 2.0;
+    CGFloat lineWidth;
+    
+    switch (axis) {
+        case kLAYOUT_AXIS_X:
+        {
+            [path moveToPoint:CGPointMake(0, centerY)];
+            [path addLineToPoint:CGPointMake(self.width, centerY)];
+            lineWidth = self.height;
+        }
+            break;
+            
+        case kLAYOUT_AXIS_Y:
+        {
+            [path moveToPoint:CGPointMake(centerX, 0)];
+            [path addLineToPoint:CGPointMake(centerX, self.height)];
+            lineWidth = self.width;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    if (!dashColor) {
+        dashColor = [UIColor blackColor];
+    }
+    
+    if (!dashPattern) {
+        dashPattern = @[@3, @3];
+    }
+    
+    border.path = path.CGPath;
+    border.strokeColor = dashColor.CGColor;
+    border.fillColor = [UIColor clearColor].CGColor;
+    border.lineWidth = lineWidth;
+    border.lineDashPattern = dashPattern;
+    [self.layer addSublayer:border];
+}
+
+/**
+ 在layer上添加分离图片
+
+ @param image 图片
+ @param rect 图片裁剪比例 CGRectMake(0, 0, 0.5, 0.5)
+ @param contentsGravity 图片填充模式
+ */
+- (void)addSpriteImage:(UIImage *)image withContentRect:(CGRect)rect contentsGravity:(NSString *)contentsGravity
+{
+    if (!contentsGravity) {
+        contentsGravity = kCAGravityResize;
+    }
+    
+    self.layer.contents = (__bridge id)image.CGImage;
+    self.layer.contentsGravity = contentsGravity;
+    self.layer.contentsRect = rect;
 }
 
 
@@ -365,11 +456,19 @@
     self.center = tempCenter;
 }
 
-//  不移动中心－设置height
+//  不移动中心－设置size
 - (void)setSize_DonotMoveCenter:(CGSize)size
 {
     CGPoint tempCenter = self.center;
     [self setSize:size];
+    self.center = tempCenter;
+}
+
+//  不移动中心－siztToFit
+- (void)sizeToFit_DonotMoveCenter
+{
+    CGPoint tempCenter = self.center;
+    [self sizeToFit];
     self.center = tempCenter;
 }
 
@@ -695,6 +794,7 @@
 }
 
 
+#pragma mark - AutoLay V1
 
 /**
  *  根据子view自动布局 -- 自动计算:起始点，结束点，间距（三值相等）
@@ -711,14 +811,20 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(0, 0, YES)
-                       gapPara:GapParaMake(0, YES)
-                      gapArray:nil
-                     gapDisAll:nil
-                superSizeToFit:NO];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(0, 0, YES)
+                                  gapPara:GapParaMake(0, YES)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
 }
 
 
@@ -736,14 +842,20 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center offStart:(CGFloat)offStart offEnd:(CGFloat)offEnd
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(offStart, offEnd, NO)
-                       gapPara:GapParaMake(0, YES)
-                      gapArray:nil
-                     gapDisAll:nil
-                superSizeToFit:NO];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(offStart, offEnd, NO)
+                                  gapPara:GapParaMake(0, YES)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
 }
 
 
@@ -760,14 +872,20 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center gapDistance:(CGFloat)gapDistance
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(0, 0, YES)
-                       gapPara:GapParaMake(gapDistance, NO)
-                      gapArray:nil
-                     gapDisAll:nil
-                superSizeToFit:NO];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(0, 0, YES)
+                                  gapPara:GapParaMake(gapDistance, NO)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
 }
 
 
@@ -786,14 +904,20 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center offStart:(CGFloat)offStart offEnd:(CGFloat)offEnd gapDistance:(CGFloat)gapDistance
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(offStart, offEnd, NO)
-                       gapPara:GapParaMake(gapDistance, NO)
-                      gapArray:nil
-                     gapDisAll:nil
-                superSizeToFit:YES];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(offStart, offEnd, NO)
+                                  gapPara:GapParaMake(gapDistance, NO)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:YES];
 }
 
 /**
@@ -810,14 +934,20 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center gapAray:(NSArray *)gapArray gapDisAll:(CGFloat)gapDisAll
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(0, 0, NO)
-                       gapPara:GapParaMake(0, NO)
-                      gapArray:[NSMutableArray arrayWithArray:gapArray]
-                     gapDisAll:[NSNumber numberWithFloat:gapDisAll]
-                superSizeToFit:YES];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(0, 0, NO)
+                                  gapPara:GapParaMake(0, NO)
+                                 gapArray:[NSMutableArray arrayWithArray:gapArray]
+                                gapDisAll:[NSNumber numberWithFloat:gapDisAll]
+                           superSizeToFit:YES];
 }
 
 /**
@@ -833,17 +963,216 @@
  */
 + (void)BearAutoLayViewArray:(NSMutableArray *)viewArray layoutAxis:(kLAYOUT_AXIS)layoutAxis center:(BOOL)center gapAray:(NSArray *)gapArray
 {
-    [self BearAutoLayViewArray:viewArray
-                    layoutAxis:layoutAxis
-                        center:center
-                       offPara:OffParaMake(0, 0, NO)
-                       gapPara:GapParaMake(0, NO)
-                      gapArray:[NSMutableArray arrayWithArray:gapArray]
-                     gapDisAll:nil
-                superSizeToFit:NO];
+    SetAlignmentType tempAlignmentType = kSetAlignmentType_Idle;
+    if (center) {
+        tempAlignmentType = kSetAlignmentType_Center;
+    }
+    
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:tempAlignmentType
+                          alignmentOffDis:0
+                                  offPara:OffParaMake(0, 0, NO)
+                                  gapPara:GapParaMake(0, NO)
+                                 gapArray:[NSMutableArray arrayWithArray:gapArray]
+                                gapDisAll:nil
+                           superSizeToFit:NO];
 }
 
 
+
+#pragma mark - AutoLay V2
+
+/**
+ *  根据子view自动布局 -- 自动计算:起始点，结束点，间距（三值相等）
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  offStart:       起始点和边框的距离
+ *  offEnd:         结束点和边框的距离
+ *  gapDistance:    view之间的间距
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(0, 0, YES)
+                                  gapPara:GapParaMake(0, YES)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
+}
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:起始点，结束点; -- 自动计算:间距
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  offStart:       起始点和边框的距离
+ *  offEnd:         结束点和边框的距离
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                      offStart:(CGFloat)offStart
+                        offEnd:(CGFloat)offEnd
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(offStart, offEnd, NO)
+                                  gapPara:GapParaMake(0, YES)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
+}
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:间距; -- 自动计算:起始点，结束点
+ *  说明： 在父类view尺寸不等于需求尺寸时，会显示日志并且取消布局
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  gapDistance:    view之间的间距
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                   gapDistance:(CGFloat)gapDistance
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(0, 0, YES)
+                                  gapPara:GapParaMake(gapDistance, NO)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:NO];
+}
+
+
+/**
+ *  根据子view自动布局 -- 需要设置:起始点，结束点，间距
+ *  说明： 在父类view尺寸不等于需求尺寸时，会自动变化
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  offStart:       起始点和边框的距离
+ *  offEnd:         结束点和边框的距离
+ *  gapDistance:    view之间的间距
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                      offStart:(CGFloat)offStart
+                        offEnd:(CGFloat)offEnd
+                   gapDistance:(CGFloat)gapDistance
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(offStart, offEnd, NO)
+                                  gapPara:GapParaMake(gapDistance, NO)
+                                 gapArray:nil
+                                gapDisAll:nil
+                           superSizeToFit:YES];
+}
+
+/**
+ *  根据子view自动布局 -- 需要设置:gapArray间距比例数组，间距总和
+ *  说明： 在父类view尺寸不等于需求尺寸时，会自动变化
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  gapArray:       间距比例数组（包括OffStart，OffEnd）
+ *  gapDisAll:      间距总和
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                       gapAray:(NSArray *)gapArray
+                     gapDisAll:(CGFloat)gapDisAll
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(0, 0, NO)
+                                  gapPara:GapParaMake(0, NO)
+                                 gapArray:[NSMutableArray arrayWithArray:gapArray]
+                                gapDisAll:[NSNumber numberWithFloat:gapDisAll]
+                           superSizeToFit:YES];
+}
+
+/**
+ *  根据子view自动布局 -- 需要设置:gapArray间距比例数组; -- 自动计算：间距总和
+ *  说明： 在父类view尺寸不等于需求尺寸时，无法自动布局
+ *
+ *  viewArray:      装有子类view的数组
+ *  layoutAxis:     布局轴向
+ *                      kLAYOUT_AXIS_X: 水平方向自动布局
+ *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
+ *  alignmentType:  对齐方式
+ *  alignmentOffDis:对齐方式相关间距
+ *  gapArray:       间距比例数组（包括OffStart，OffEnd）
+ */
++ (void)BearV2AutoLayViewArray:(NSMutableArray *)viewArray
+                    layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                 alignmentType:(SetAlignmentType)alignmentType
+               alignmentOffDis:(CGFloat)alignmentOffDis
+                       gapAray:(NSArray *)gapArray
+{
+    [self BearAutoLayCoreMethod_ViewArray:viewArray
+                               layoutAxis:layoutAxis
+                            alignmentType:alignmentType
+                          alignmentOffDis:alignmentOffDis
+                                  offPara:OffParaMake(0, 0, NO)
+                                  gapPara:GapParaMake(0, NO)
+                                 gapArray:[NSMutableArray arrayWithArray:gapArray]
+                                gapDisAll:nil
+                           superSizeToFit:NO];
+}
+
+
+
+
+#pragma mark - 布局核心方法
 
 /**
  *  根据子view自动布局
@@ -855,7 +1184,13 @@
  *  layoutAxis:     布局轴向
  *                      kLAYOUT_AXIS_X: 水平方向自动布局
  *                      kLAYOUT_AXIS_Y: 垂直方向自动布局
- *  center:         是否和父类的view居中对其（水平方向布局 则 垂直方向居中；垂直方向布局 则 水平方向居中）
+ *  alignmentType:  和父类的view对其方式
+ *                      kSetAlignmentType_Idle,     //  不处理对齐方式
+ *                      kSetAlignmentType_Center,   //  剧中对齐
+ *                      kSetAlignmentType_Start,    //  上／左对齐
+ *                      kSetAlignmentType_End,      //  下／右对齐
+ *  alignmentOffDis:对齐方式的offDistance
+ *                      只在kSetAlignmentType_Start／kSetAlignmentType_End情况下才会生效
  *  OffPara:        边距参数
  *                      offStart:       起始点和边框的距离
  *                      offEnd:         结束点和边框的距离
@@ -867,14 +1202,15 @@
  *  gapDisAll:      所有间距总和，包括offStart和offEnd
  *  superSizeToFit: 父类view自适应
  */
-+ (void)BearAutoLayViewArray:(NSMutableArray *)viewArray
-                  layoutAxis:(kLAYOUT_AXIS)layoutAxis
-                      center:(BOOL)center
-                     offPara:(OffPara)offPara
-                     gapPara:(GapPara)gapPara
-                    gapArray:(NSMutableArray *)gapArray
-                   gapDisAll:(NSNumber *)gapDisAll
-              superSizeToFit:(BOOL)superSizeToFit
++ (void)BearAutoLayCoreMethod_ViewArray:(NSMutableArray *)viewArray
+                             layoutAxis:(kLAYOUT_AXIS)layoutAxis
+                          alignmentType:(SetAlignmentType)alignmentType
+                        alignmentOffDis:(CGFloat)alignmentOffDis
+                                offPara:(OffPara)offPara
+                                gapPara:(GapPara)gapPara
+                               gapArray:(NSMutableArray *)gapArray
+                              gapDisAll:(NSNumber *)gapDisAll
+                         superSizeToFit:(BOOL)superSizeToFit
 
 {
     
@@ -1050,9 +1386,35 @@
             [tempSubView setX:tempX];
             tempX += tempSubView.width + [gapArray[i + 1] floatValue];
             
-            if (center) {
-                tempSubView.center = CGPointMake(tempSubView.center.x, containerHeight/2);
+            switch (alignmentType) {
+                case kSetAlignmentType_Idle:
+                {
+                    nil;
+                }
+                    break;
+                    
+                case kSetAlignmentType_Center:
+                {
+                    tempSubView.center = CGPointMake(tempSubView.center.x, containerHeight/2);
+                }
+                    break;
+                    
+                case kSetAlignmentType_Start:
+                {
+                    [tempSubView setY:alignmentOffDis];
+                }
+                    break;
+                    
+                case kSetAlignmentType_End:
+                {
+                    [tempSubView setMaxY:containerHeight - alignmentOffDis];
+                }
+                    break;
+                    
+                default:
+                    break;
             }
+            
         }
     }
     else if(layoutAxis == kLAYOUT_AXIS_Y) {
@@ -1121,9 +1483,34 @@
             [tempSubView setY:tempX];
             tempX += tempSubView.height + [gapArray[i + 1] floatValue];
             
-            if (center) {
-                //竖直方向相对于父类view剧中
-                tempSubView.center = CGPointMake(containerWidth/2, tempSubView.center.y);
+            switch (alignmentType) {
+                case kSetAlignmentType_Idle:
+                {
+                    nil;
+                }
+                    break;
+                    
+                case kSetAlignmentType_Center:
+                {
+                    //竖直方向相对于父类view剧中
+                    tempSubView.center = CGPointMake(containerWidth/2, tempSubView.center.y);
+                }
+                    break;
+                    
+                case kSetAlignmentType_Start:
+                {
+                    [tempSubView setX:alignmentOffDis];
+                }
+                    break;
+                    
+                case kSetAlignmentType_End:
+                {
+                    [tempSubView setMaxX:containerWidth - alignmentOffDis];
+                }
+                    break;
+                    
+                default:
+                    break;
             }
         }
     }

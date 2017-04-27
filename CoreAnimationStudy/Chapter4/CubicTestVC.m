@@ -7,6 +7,11 @@
 //
 
 #import "CubicTestVC.h"
+#import <QuartzCore/QuartzCore.h>
+#import <GLKit/GLKit.h>
+
+#define LIGHT_DIRECTION 0, 1, -0.5
+#define AMBIENT_LIGHT 0.5
 
 @interface CubicTestVC ()
 {
@@ -25,12 +30,14 @@
     _halfWidth = 100;
     
     _contentView = [[UIView alloc] initWithFrame:self.view.bounds];
+//    _contentView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_contentView];
     
     [self createSixFaces];
     [self addFaces];
 }
 
+#pragma mark - SixFaces
 - (void)addFaces
 {
     CATransform3D perspective = CATransform3DIdentity;
@@ -76,6 +83,7 @@
     for (int i = 0; i < 6; i++) {
         UIView *faceView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2 * _halfWidth, 2 * _halfWidth)];
         faceView.backgroundColor = [self randomColor];
+        faceView.tag = i;
         
         UILabel *label = [UILabel new];
         label.text = [NSString stringWithFormat:@"%d", i + 1];
@@ -86,7 +94,23 @@
         [label BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
         
         [_facesArray addObject:faceView];
+        
+        UIButton *faceBtn = [[UIButton alloc] initWithFrame:faceView.bounds];
+        faceBtn.tag = i;
+        [faceBtn addTarget:self action:@selector(clickBtnEvent:) forControlEvents:UIControlEventTouchUpInside];
+        [faceView addSubview:faceBtn];
+        
+        if (i == 4 ||
+            i == 5 ||
+            i == 6) {
+            faceBtn.userInteractionEnabled = NO;
+        }
     }
+}
+
+- (void)clickBtnEvent:(UIButton *)sender
+{
+    NSLog(@"--tap:%ld", (long)sender.tag);
 }
 
 - (void)addFace:(NSInteger)index withTransForm:(CATransform3D)transform
@@ -95,30 +119,43 @@
     [_contentView addSubview:faceView];
     [faceView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
     faceView.layer.transform = transform;
+    
+//    [self applyingLightingToFace:faceView.layer];
 }
 
 - (UIColor *)randomColor
 {
-    CGFloat r = arc4random() % 255 / 255.0;
-    CGFloat g = arc4random() % 255 / 255.0;
-    CGFloat b = arc4random() % 255 / 255.0;
-    UIColor *randomColor = [UIColor colorWithRed:r green:g blue:b alpha:1];
-    return randomColor;
+    return [BearConstants randomColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Light And Shadow
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)applyingLightingToFace:(CALayer *)face
+{
+    //add lighting layer
+    CALayer *layer = [CALayer layer];
+    layer.frame = face.bounds;
+    [face addSublayer:layer];
+    
+    //convert the face transform to matrix
+    //(GLKMatrix has the same structure as CATransform3D)
+    CATransform3D transform = face.transform;
+    GLKMatrix4 matrix4 = *(GLKMatrix4 *)&transform;
+    GLKMatrix3 matrix3 = GLKMatrix4GetMatrix3(matrix4);
+    
+    //get face normal
+    GLKVector3 normal = GLKVector3Make(0, 0, 1);
+    normal = GLKMatrix3MultiplyVector3(matrix3, normal);
+    normal = GLKVector3Normalize(normal);
+    
+    //get got product with light dirction
+    GLKVector3 light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION));
+    float dotProduct = GLKVector3DotProduct(light, normal);
+    
+    //set lighting layer opacity
+    CGFloat shadow = 1 + dotProduct - AMBIENT_LIGHT;
+    UIColor *color = [UIColor colorWithWhite:0 alpha:shadow];
+    layer.backgroundColor = color.CGColor;
 }
-*/
 
 @end

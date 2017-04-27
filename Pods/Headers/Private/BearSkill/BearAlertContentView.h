@@ -1,1 +1,1 @@
-../../../BearSkill/Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.h
+../../../BearSkill/Pod/UIAndExtend/BearAlertView/BearAlertContentView.h

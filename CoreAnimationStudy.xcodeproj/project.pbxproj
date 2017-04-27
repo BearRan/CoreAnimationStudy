@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */; };
 		09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B11EA597430064D100 /* ReflectionTestVC.m */; };
 		09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B41EA5977C0064D100 /* ReflectionView.m */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
+		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09FAC1AD1EA593C50064D100 /* CAReplicatorLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerTestVC.h; sourceTree = "<group>"; };
 		09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerTestVC.m; sourceTree = "<group>"; };
 		09FAC1B01EA597430064D100 /* ReflectionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionTestVC.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				09FAC1FB1EA989A80064D100 /* CATransform3DTest3VC.m */,
 				09FAC1FD1EA98E2B0064D100 /* CubicTestVC.h */,
 				09FAC1FE1EA98E2B0064D100 /* CubicTestVC.m */,
+				09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */,
+				09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */,
 			);
 			name = Chapter4_Transform;
 			path = Chapter4;
@@ -343,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		59C722E627A02C9A40069260 /* [CP] Copy Pods Resources */ = {
@@ -371,6 +376,7 @@
 				09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */,
 				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
+				09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
