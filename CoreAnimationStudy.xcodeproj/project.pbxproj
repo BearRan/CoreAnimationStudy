@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
+		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
+		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
 		09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */; };
 		09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B11EA597430064D100 /* ReflectionTestVC.m */; };
 		09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAC1B41EA5977C0064D100 /* ReflectionView.m */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
+		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
+		09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAScrolLayerTestVC.m; sourceTree = "<group>"; };
+		09F770A31EB2C939003A62A9 /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		09F770A41EB2C939003A62A9 /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
 		09FAC1AD1EA593C50064D100 /* CAReplicatorLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerTestVC.h; sourceTree = "<group>"; };
 		09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerTestVC.m; sourceTree = "<group>"; };
 		09FAC1B01EA597430064D100 /* ReflectionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionTestVC.h; sourceTree = "<group>"; };
@@ -117,6 +123,10 @@
 			children = (
 				09FAC1AD1EA593C50064D100 /* CAReplicatorLayerTestVC.h */,
 				09FAC1AE1EA593C50064D100 /* CAReplicatorLayerTestVC.m */,
+				09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */,
+				09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */,
+				09F770A31EB2C939003A62A9 /* ScrollView.h */,
+				09F770A41EB2C939003A62A9 /* ScrollView.m */,
 				09FAC1B61EA597830064D100 /* ReflectionTest */,
 			);
 			name = Chapter6;
@@ -375,12 +385,14 @@
 			files = (
 				09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */,
 				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
+				09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */,
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
+				09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */,
 				09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */,
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,

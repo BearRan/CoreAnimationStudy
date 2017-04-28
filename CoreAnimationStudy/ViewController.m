@@ -42,17 +42,18 @@
 //                     @"GroupOpacityVC",
                      
                      //Chapter4
-                     @"CAAffineTransformVC",
-                     @"ComplexTransformViewController",
-                     @"CGAffineTransformShearTestVC",
-                     @"CATrasnform3DTestVC",
-                     @"CATrasnform3DTest2VC",
-                     @"CATransform3DTest3VC",
-                     @"CubicTestVC",
-                     @"CubicLayerTestVC",
+//                     @"CAAffineTransformVC",
+//                     @"ComplexTransformViewController",
+//                     @"CGAffineTransformShearTestVC",
+//                     @"CATrasnform3DTestVC",
+//                     @"CATrasnform3DTest2VC",
+//                     @"CATransform3DTest3VC",
+//                     @"CubicTestVC",
+//                     @"CubicLayerTestVC",
                      
-//                     @"CAReplicatorLayerTestVC",
-//                     @"ReflectionTestVC",
+                     @"CAReplicatorLayerTestVC",
+                     @"ReflectionTestVC",
+                     @"CAScrolLayerTestVC",
                      ];
 }
 
