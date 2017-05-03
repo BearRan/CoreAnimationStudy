@@ -54,6 +54,7 @@
                      @"CAReplicatorLayerTestVC",
                      @"ReflectionTestVC",
                      @"CAScrolLayerTestVC",
+                     @"CATiledLayerTestVC",
                      ];
 }
 
