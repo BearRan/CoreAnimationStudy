@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09362BE11EB95D8C001FAA46 /* CATiledLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */; };
 		09362BEE1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */; };
+		096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -47,6 +48,8 @@
 		09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATiledLayerTestVC.m; sourceTree = "<group>"; };
 		09362BEC1EBAAC51001FAA46 /* CAEmitterLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerTestVC.h; sourceTree = "<group>"; };
 		09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerTestVC.m; sourceTree = "<group>"; };
+		096FC9FE1EBC02ED00A5D8AC /* CAEaglLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEaglLayerTestVC.h; sourceTree = "<group>"; };
+		096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEaglLayerTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */,
 				09362BEC1EBAAC51001FAA46 /* CAEmitterLayerTestVC.h */,
 				09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */,
+				096FC9FE1EBC02ED00A5D8AC /* CAEaglLayerTestVC.h */,
+				096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */,
 				09FAC1B61EA597830064D100 /* ReflectionTest */,
 			);
 			name = Chapter6;
@@ -408,6 +413,7 @@
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
 				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
+				096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */,
 				09FAC1FC1EA989A80064D100 /* CATransform3DTest3VC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,

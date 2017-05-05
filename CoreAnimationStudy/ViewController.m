@@ -56,6 +56,7 @@
                      @"CAScrolLayerTestVC",
                      @"CATiledLayerTestVC",
                      @"CAEmitterLayerTestVC",
+                     @"CAEaglLayerTestVC",
                      ];
 }
 
