@@ -51,13 +51,17 @@
 //                     @"CubicTestVC",
 //                     @"CubicLayerTestVC",
                      
-                     @"CAReplicatorLayerTestVC",
-                     @"ReflectionTestVC",
-                     @"CAScrolLayerTestVC",
-                     @"CATiledLayerTestVC",
-                     @"CAEmitterLayerTestVC",
-                     @"CAEaglLayerTestVC",
-                     @"AVPlayerTestVC",
+                     //Chapter6
+//                     @"CAReplicatorLayerTestVC",
+//                     @"ReflectionTestVC",
+//                     @"CAScrolLayerTestVC",
+//                     @"CATiledLayerTestVC",
+//                     @"CAEmitterLayerTestVC",
+//                     @"CAEaglLayerTestVC",
+//                     @"AVPlayerTestVC",
+                     
+                     //Chapter7
+                     @"LayerChangeColorTestVC",
                      ];
 }
 

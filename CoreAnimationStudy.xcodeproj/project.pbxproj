@@ -12,6 +12,7 @@
 		096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */; };
 		096FCADB1EBFF50200A5D8AC /* AVPlayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCADA1EBFF50200A5D8AC /* AVPlayerTestVC.m */; };
 		096FCADD1EBFF69900A5D8AC /* TestMov.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 096FCADC1EBFF69900A5D8AC /* TestMov.mp4 */; };
+		096FCAE11EBFFAE400A5D8AC /* LayerChangeColorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAE01EBFFAE400A5D8AC /* LayerChangeColorTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -55,6 +56,8 @@
 		096FCAD91EBFF50200A5D8AC /* AVPlayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerTestVC.h; sourceTree = "<group>"; };
 		096FCADA1EBFF50200A5D8AC /* AVPlayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerTestVC.m; sourceTree = "<group>"; };
 		096FCADC1EBFF69900A5D8AC /* TestMov.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestMov.mp4; sourceTree = "<group>"; };
+		096FCADF1EBFFAE400A5D8AC /* LayerChangeColorTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerChangeColorTestVC.h; sourceTree = "<group>"; };
+		096FCAE01EBFFAE400A5D8AC /* LayerChangeColorTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerChangeColorTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -132,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096FCADE1EBFFAC300A5D8AC /* Chapter7 */ = {
+			isa = PBXGroup;
+			children = (
+				096FCADF1EBFFAE400A5D8AC /* LayerChangeColorTestVC.h */,
+				096FCAE01EBFFAE400A5D8AC /* LayerChangeColorTestVC.m */,
+			);
+			path = Chapter7;
+			sourceTree = "<group>";
+		};
 		09FAC1A91EA593700064D100 /* Chapter6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +260,7 @@
 				1831CB3B1E30FD7900CBC21F /* Chapter1-3 */,
 				1831CB511E30FD7900CBC21F /* Chapter4_Transform */,
 				09FAC1A91EA593700064D100 /* Chapter6 */,
+				096FCADE1EBFFAC300A5D8AC /* Chapter7 */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -421,6 +434,7 @@
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
+				096FCAE11EBFFAE400A5D8AC /* LayerChangeColorTestVC.m in Sources */,
 				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
 				096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */,
 				09FAC1FC1EA989A80064D100 /* CATransform3DTest3VC.m in Sources */,
