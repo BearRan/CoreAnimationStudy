@@ -19,7 +19,7 @@
 @property (assign, nonatomic) GLuint colorRenderbuffer;
 @property (assign, nonatomic) GLint framebufferWidth;
 @property (assign, nonatomic) GLint framebufferHeight;
-@property (assign, nonatomic) GLKBaseEffect *effect;
+@property (strong, nonatomic) GLKBaseEffect *effect;
 
 @end
 
@@ -27,7 +27,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //set up context
+    self.glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [EAGLContext setCurrentContext:self.glContext];
+    
+    //set up layer
+    self.glLayer = [CAEAGLLayer layer];
+    self.glLayer.frame = self.glView.bounds;
+    [self.glView.layer addSublayer:self.glLayer];
+    self.glLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking: @NO,
+                                        kEAGLDrawablePropertyColorFormat: kEAGLColorFormatRGBA8};
+    
+    //set up base effect
+    self.effect = [[GLKBaseEffect alloc] init];
+    
+    //set up buffers
+    [self setUpBuffers];
+    
+    //draw frame
+    [self drawFrame];
 }
 
 - (void)setUpBuffers
@@ -52,6 +71,62 @@
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         NSLog(@"Failed to make complete framebuffer object:%i",glCheckFramebufferStatus(GL_FRAMEBUFFER));
     }
+}
+
+- (void)tearDownBuffers
+{
+    if (_framebuffer) {
+        //delete framebuffer
+        glDeleteBuffers(1, &_framebuffer);
+        _framebuffer = 0;
+    }
+    
+    if (_colorRenderbuffer) {
+        //delete color render buffer
+        glDeleteRenderbuffers(1, &_colorRenderbuffer);
+        _colorRenderbuffer = 0;
+    }
+}
+
+- (void)drawFrame
+{
+    //bind frame buffer & set viewport
+    glBindFramebuffer(GL_FRAMEBUFFER, _framebuffer);
+    glViewport(0, 0, _framebufferWidth, _framebufferHeight);
+    
+    //bind shader program
+    [self.effect prepareToDraw];
+    
+    //clear the screen
+    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0, 0, 0, 1);
+    
+    //set up vertices
+    GLfloat vertices[] = {
+        -0.5f, -0.5f, -1.0f,
+        0.0f, 0.5f, -1.0f,
+        0.5f, -0.5f, 1.0f,
+    };
+    
+    //set up colors
+    CGFloat colors[] = {
+        0.0f, 0.0f, 1.0f, 1.0f,
+        0.0f, 1.0f, 0.0f, 1.0f,
+        1.0f, 0.0f, 0.0f, 1.0f,
+    };
+    
+    //draw triangle
+    glEnableVertexAttribArray(GLKVertexAttribPosition);
+    glEnableVertexAttribArray(GLKVertexAttribColor);
+    glVertexAttribPointer(GLKVertexAttribPosition,
+                          3, GL_FLOAT, GL_FALSE, 0, vertices);
+    glVertexAttribPointer(GLKVertexAttribColor,
+                          4, GL_FLOAT, GL_FALSE, 0, colors);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    
+    //present render buffer
+    glBindFramebuffer(GL_RENDERBUFFER, _colorRenderbuffer);
+    [self.glContext presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 @end

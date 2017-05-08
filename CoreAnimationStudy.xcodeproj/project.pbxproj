@@ -10,6 +10,8 @@
 		09362BE11EB95D8C001FAA46 /* CATiledLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */; };
 		09362BEE1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */; };
 		096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */; };
+		096FCADB1EBFF50200A5D8AC /* AVPlayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCADA1EBFF50200A5D8AC /* AVPlayerTestVC.m */; };
+		096FCADD1EBFF69900A5D8AC /* TestMov.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 096FCADC1EBFF69900A5D8AC /* TestMov.mp4 */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -50,6 +52,9 @@
 		09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerTestVC.m; sourceTree = "<group>"; };
 		096FC9FE1EBC02ED00A5D8AC /* CAEaglLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEaglLayerTestVC.h; sourceTree = "<group>"; };
 		096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEaglLayerTestVC.m; sourceTree = "<group>"; };
+		096FCAD91EBFF50200A5D8AC /* AVPlayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerTestVC.h; sourceTree = "<group>"; };
+		096FCADA1EBFF50200A5D8AC /* AVPlayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerTestVC.m; sourceTree = "<group>"; };
+		096FCADC1EBFF69900A5D8AC /* TestMov.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestMov.mp4; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -142,6 +147,9 @@
 				09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */,
 				096FC9FE1EBC02ED00A5D8AC /* CAEaglLayerTestVC.h */,
 				096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */,
+				096FCAD91EBFF50200A5D8AC /* AVPlayerTestVC.h */,
+				096FCADA1EBFF50200A5D8AC /* AVPlayerTestVC.m */,
+				096FCADC1EBFF69900A5D8AC /* TestMov.mp4 */,
 				09FAC1B61EA597830064D100 /* ReflectionTest */,
 			);
 			name = Chapter6;
@@ -337,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096FCADD1EBFF69900A5D8AC /* TestMov.mp4 in Resources */,
 				18D8B64C1DDA984400C6545D /* LaunchScreen.storyboard in Resources */,
 				18D8B6491DDA984400C6545D /* Assets.xcassets in Resources */,
 				18D8B6471DDA984400C6545D /* Main.storyboard in Resources */,
@@ -422,6 +431,7 @@
 				09FAC1B21EA597430064D100 /* ReflectionTestVC.m in Sources */,
 				09362BEE1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m in Sources */,
 				1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */,
+				096FCADB1EBFF50200A5D8AC /* AVPlayerTestVC.m in Sources */,
 				09FAC1B91EA664FA0064D100 /* ComplexTransformViewController.m in Sources */,
 				09FAC1BF1EA6E2CB0064D100 /* CATrasnform3DTestVC.m in Sources */,
 				1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */,

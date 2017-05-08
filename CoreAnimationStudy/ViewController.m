@@ -57,6 +57,7 @@
                      @"CATiledLayerTestVC",
                      @"CAEmitterLayerTestVC",
                      @"CAEaglLayerTestVC",
+                     @"AVPlayerTestVC",
                      ];
 }
 
