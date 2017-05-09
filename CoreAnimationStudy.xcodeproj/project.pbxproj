@@ -15,6 +15,7 @@
 		096FCAE11EBFFAE400A5D8AC /* LayerChangeColorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAE01EBFFAE400A5D8AC /* LayerChangeColorTestVC.m */; };
 		096FCAF71EC13C2600A5D8AC /* LayerBehaviorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAF61EC13C2600A5D8AC /* LayerBehaviorTestVC.m */; };
 		096FCAFA1EC1446D00A5D8AC /* CustomActionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */; };
+		096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -64,6 +65,8 @@
 		096FCAF61EC13C2600A5D8AC /* LayerBehaviorTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerBehaviorTestVC.m; sourceTree = "<group>"; };
 		096FCAF81EC1446D00A5D8AC /* CustomActionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActionTestVC.h; sourceTree = "<group>"; };
 		096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActionTestVC.m; sourceTree = "<group>"; };
+		096FCAFB1EC1479200A5D8AC /* PresentationLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationLayerTestVC.h; sourceTree = "<group>"; };
+		096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationLayerTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				096FCAF61EC13C2600A5D8AC /* LayerBehaviorTestVC.m */,
 				096FCAF81EC1446D00A5D8AC /* CustomActionTestVC.h */,
 				096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */,
+				096FCAFB1EC1479200A5D8AC /* PresentationLayerTestVC.h */,
+				096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */,
 			);
 			path = Chapter7;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
+				096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
 				09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */,
 				09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */,

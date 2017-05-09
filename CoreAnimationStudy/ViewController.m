@@ -64,6 +64,7 @@
                      @"LayerChangeColorTestVC",
                      @"LayerBehaviorTestVC",
                      @"CustomActionTestVC",
+                     @"PresentationLayerTestVC",
                      ];
 }
 
