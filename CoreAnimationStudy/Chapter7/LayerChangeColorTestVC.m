@@ -46,8 +46,27 @@
 
 - (void)btnEvent
 {
+    [CATransaction begin];
+    
+    //  禁用动画
+//    [CATransaction setDisableActions:YES];
+    
+    [CATransaction setAnimationDuration:2.0];
+    [CATransaction setCompletionBlock:^{
+//        [CATransaction begin];
+//        [CATransaction setAnimationDuration:4.0];
+        
+        CGAffineTransform transform = _colorLayer.affineTransform;
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        _colorLayer.affineTransform = transform;
+        
+//        [CATransaction commit];
+    }];
+    
     UIColor *randomColor = [BearConstants randomColor];
     _colorLayer.backgroundColor = randomColor.CGColor;
+    
+    [CATransaction commit];
 }
 
 @end

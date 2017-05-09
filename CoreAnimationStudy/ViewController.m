@@ -62,6 +62,8 @@
                      
                      //Chapter7
                      @"LayerChangeColorTestVC",
+                     @"LayerBehaviorTestVC",
+                     @"CustomActionTestVC",
                      ];
 }
 
