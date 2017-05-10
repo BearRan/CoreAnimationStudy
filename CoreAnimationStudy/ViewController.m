@@ -65,6 +65,8 @@
                      @"LayerBehaviorTestVC",
                      @"CustomActionTestVC",
                      @"PresentationLayerTestVC",
+                     @"SpaceShipTestVC",
+                     @"ImageTransitionTestVC",
                      ];
 }
 

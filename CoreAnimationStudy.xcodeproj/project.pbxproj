@@ -16,6 +16,8 @@
 		096FCAF71EC13C2600A5D8AC /* LayerBehaviorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAF61EC13C2600A5D8AC /* LayerBehaviorTestVC.m */; };
 		096FCAFA1EC1446D00A5D8AC /* CustomActionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */; };
 		096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */; };
+		0985474A1EC2932E00E65846 /* SpaceShipTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098547491EC2932E00E65846 /* SpaceShipTestVC.m */; };
+		0985474D1EC29B9000E65846 /* ImageTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -67,6 +69,10 @@
 		096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActionTestVC.m; sourceTree = "<group>"; };
 		096FCAFB1EC1479200A5D8AC /* PresentationLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationLayerTestVC.h; sourceTree = "<group>"; };
 		096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationLayerTestVC.m; sourceTree = "<group>"; };
+		098547481EC2932E00E65846 /* SpaceShipTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShipTestVC.h; sourceTree = "<group>"; };
+		098547491EC2932E00E65846 /* SpaceShipTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShipTestVC.m; sourceTree = "<group>"; };
+		0985474B1EC29B9000E65846 /* ImageTransitionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransitionTestVC.h; sourceTree = "<group>"; };
+		0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransitionTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 				096FCAF91EC1446D00A5D8AC /* CustomActionTestVC.m */,
 				096FCAFB1EC1479200A5D8AC /* PresentationLayerTestVC.h */,
 				096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */,
+				098547481EC2932E00E65846 /* SpaceShipTestVC.h */,
+				098547491EC2932E00E65846 /* SpaceShipTestVC.m */,
+				0985474B1EC29B9000E65846 /* ImageTransitionTestVC.h */,
+				0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */,
 			);
 			path = Chapter7;
 			sourceTree = "<group>";
@@ -442,6 +452,7 @@
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */,
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
+				0985474D1EC29B9000E65846 /* ImageTransitionTestVC.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */,
@@ -464,6 +475,7 @@
 				09362BEE1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m in Sources */,
 				1831CB581E30FD7900CBC21F /* MaskLayerTestVC.m in Sources */,
 				096FCADB1EBFF50200A5D8AC /* AVPlayerTestVC.m in Sources */,
+				0985474A1EC2932E00E65846 /* SpaceShipTestVC.m in Sources */,
 				09FAC1B91EA664FA0064D100 /* ComplexTransformViewController.m in Sources */,
 				09FAC1BF1EA6E2CB0064D100 /* CATrasnform3DTestVC.m in Sources */,
 				1831CB561E30FD7900CBC21F /* GroupOpacityVC.m in Sources */,
