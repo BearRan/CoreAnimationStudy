@@ -18,6 +18,8 @@
 		096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FCAFC1EC1479200A5D8AC /* PresentationLayerTestVC.m */; };
 		0985474A1EC2932E00E65846 /* SpaceShipTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098547491EC2932E00E65846 /* SpaceShipTestVC.m */; };
 		0985474D1EC29B9000E65846 /* ImageTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */; };
+		09913A7F1EC92F61001BC279 /* ViewTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */; };
+		09913A821EC932D7001BC279 /* CustomTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -73,6 +75,10 @@
 		098547491EC2932E00E65846 /* SpaceShipTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShipTestVC.m; sourceTree = "<group>"; };
 		0985474B1EC29B9000E65846 /* ImageTransitionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransitionTestVC.h; sourceTree = "<group>"; };
 		0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransitionTestVC.m; sourceTree = "<group>"; };
+		09913A7D1EC92F61001BC279 /* ViewTransitionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTransitionTestVC.h; sourceTree = "<group>"; };
+		09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTransitionTestVC.m; sourceTree = "<group>"; };
+		09913A801EC932D7001BC279 /* CustomTransitionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransitionTestVC.h; sourceTree = "<group>"; };
+		09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 				098547491EC2932E00E65846 /* SpaceShipTestVC.m */,
 				0985474B1EC29B9000E65846 /* ImageTransitionTestVC.h */,
 				0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */,
+				09913A7D1EC92F61001BC279 /* ViewTransitionTestVC.h */,
+				09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */,
+				09913A801EC932D7001BC279 /* CustomTransitionTestVC.h */,
+				09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */,
 			);
 			path = Chapter7;
 			sourceTree = "<group>";
@@ -457,11 +467,13 @@
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
+				09913A7F1EC92F61001BC279 /* ViewTransitionTestVC.m in Sources */,
 				09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */,
 				09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */,
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
+				09913A821EC932D7001BC279 /* CustomTransitionTestVC.m in Sources */,
 				096FCAE11EBFFAE400A5D8AC /* LayerChangeColorTestVC.m in Sources */,
 				1831CB5F1E30FDE000CBC21F /* CAAffineTransformVC.m in Sources */,
 				096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */,
