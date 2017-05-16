@@ -69,6 +69,7 @@
                      @"ImageTransitionTestVC",
                      @"ViewTransitionTestVC",
                      @"CustomTransitionTestVC",
+                     @"CancelAnimationTestVC",
                      ];
 }
 

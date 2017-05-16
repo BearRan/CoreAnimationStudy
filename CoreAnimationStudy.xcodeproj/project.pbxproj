@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0913B4001ECA8286005C132D /* CancelAnimationTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0913B3FF1ECA8286005C132D /* CancelAnimationTestVC.m */; };
 		09362BE11EB95D8C001FAA46 /* CATiledLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */; };
 		09362BEE1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09362BED1EBAAC51001FAA46 /* CAEmitterLayerTestVC.m */; };
 		096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 096FC9FF1EBC02ED00A5D8AC /* CAEaglLayerTestVC.m */; };
@@ -54,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0913B3FE1ECA8286005C132D /* CancelAnimationTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelAnimationTestVC.h; sourceTree = "<group>"; };
+		0913B3FF1ECA8286005C132D /* CancelAnimationTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelAnimationTestVC.m; sourceTree = "<group>"; };
 		09362BDF1EB95D8C001FAA46 /* CATiledLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATiledLayerTestVC.h; sourceTree = "<group>"; };
 		09362BE01EB95D8C001FAA46 /* CATiledLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATiledLayerTestVC.m; sourceTree = "<group>"; };
 		09362BEC1EBAAC51001FAA46 /* CAEmitterLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerTestVC.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */,
 				09913A801EC932D7001BC279 /* CustomTransitionTestVC.h */,
 				09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */,
+				0913B3FE1ECA8286005C132D /* CancelAnimationTestVC.h */,
+				0913B3FF1ECA8286005C132D /* CancelAnimationTestVC.m */,
 			);
 			path = Chapter7;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				18D8B6441DDA984400C6545D /* ViewController.m in Sources */,
 				0985474D1EC29B9000E65846 /* ImageTransitionTestVC.m in Sources */,
 				09FAC1AF1EA593C50064D100 /* CAReplicatorLayerTestVC.m in Sources */,
+				0913B4001ECA8286005C132D /* CancelAnimationTestVC.m in Sources */,
 				1831CB5A1E30FD7900CBC21F /* ShadowTestVC.m in Sources */,
 				096FCAFD1EC1479200A5D8AC /* PresentationLayerTestVC.m in Sources */,
 				181939931E0B654900FAEEF0 /* BaseViewController.m in Sources */,
