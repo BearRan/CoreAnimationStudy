@@ -21,6 +21,8 @@
 		0985474D1EC29B9000E65846 /* ImageTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985474C1EC29B9000E65846 /* ImageTransitionTestVC.m */; };
 		09913A7F1EC92F61001BC279 /* ViewTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */; };
 		09913A821EC932D7001BC279 /* CustomTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */; };
+		0999B8AC1ECBD27300D9F241 /* DurationAndRepetionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0999B8AB1ECBD27300D9F241 /* DurationAndRepetionTestVC.m */; };
+		0999B8AF1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -82,6 +84,10 @@
 		09913A7E1EC92F61001BC279 /* ViewTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTransitionTestVC.m; sourceTree = "<group>"; };
 		09913A801EC932D7001BC279 /* CustomTransitionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransitionTestVC.h; sourceTree = "<group>"; };
 		09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionTestVC.m; sourceTree = "<group>"; };
+		0999B8AA1ECBD27300D9F241 /* DurationAndRepetionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DurationAndRepetionTestVC.h; sourceTree = "<group>"; };
+		0999B8AB1ECBD27300D9F241 /* DurationAndRepetionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationAndRepetionTestVC.m; sourceTree = "<group>"; };
+		0999B8AD1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorAutoReserveTestVC.h; sourceTree = "<group>"; };
+		0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorAutoReserveTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -182,6 +188,17 @@
 				0913B3FF1ECA8286005C132D /* CancelAnimationTestVC.m */,
 			);
 			path = Chapter7;
+			sourceTree = "<group>";
+		};
+		0999B8A91ECBD25200D9F241 /* Chapter9 */ = {
+			isa = PBXGroup;
+			children = (
+				0999B8AA1ECBD27300D9F241 /* DurationAndRepetionTestVC.h */,
+				0999B8AB1ECBD27300D9F241 /* DurationAndRepetionTestVC.m */,
+				0999B8AD1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.h */,
+				0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */,
+			);
+			path = Chapter9;
 			sourceTree = "<group>";
 		};
 		09FAC1A91EA593700064D100 /* Chapter6 */ = {
@@ -301,6 +318,7 @@
 				1831CB511E30FD7900CBC21F /* Chapter4_Transform */,
 				09FAC1A91EA593700064D100 /* Chapter6 */,
 				096FCADE1EBFFAC300A5D8AC /* Chapter7 */,
+				0999B8A91ECBD25200D9F241 /* Chapter9 */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -463,6 +481,7 @@
 				09FAC1BC1EA6E1440064D100 /* CGAffineTransformShearTestVC.m in Sources */,
 				096FCAF71EC13C2600A5D8AC /* LayerBehaviorTestVC.m in Sources */,
 				1831CB5B1E30FD7900CBC21F /* ZPositionViewController.m in Sources */,
+				0999B8AF1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m in Sources */,
 				09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */,
 				1831CB551E30FD7900CBC21F /* FilterTestVC.m in Sources */,
 				09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */,
@@ -477,6 +496,7 @@
 				09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */,
 				09FAC1C21EA6E6F10064D100 /* CATrasnform3DTest2VC.m in Sources */,
 				1831CB531E30FD7900CBC21F /* BorderViewController.m in Sources */,
+				0999B8AC1ECBD27300D9F241 /* DurationAndRepetionTestVC.m in Sources */,
 				1831CB571E30FD7900CBC21F /* HitTestViewController.m in Sources */,
 				1831CB591E30FD7900CBC21F /* ShadowPathTestVC.m in Sources */,
 				09913A821EC932D7001BC279 /* CustomTransitionTestVC.m in Sources */,
