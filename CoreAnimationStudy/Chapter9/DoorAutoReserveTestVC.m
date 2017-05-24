@@ -9,6 +9,9 @@
 #import "DoorAutoReserveTestVC.h"
 
 @interface DoorAutoReserveTestVC ()
+{
+    CALayer *_doorLayer;
+}
 
 @end
 
@@ -22,12 +25,12 @@
 
 - (void)createUI
 {
-    CALayer *doorLayer = [CALayer layer];
-    doorLayer.frame = CGRectMake(0, 0, 128, 256);
-    doorLayer.position = CGPointMake(WIDTH / 2.0, HEIGHT / 2.0);
-    doorLayer.anchorPoint = CGPointMake(0, 0.5);
-    doorLayer.backgroundColor = [UIColor orangeColor].CGColor;
-    [self.view.layer addSublayer:doorLayer];
+    _doorLayer = [CALayer layer];
+    _doorLayer.frame = CGRectMake(0, 0, 128, 256);
+    _doorLayer.position = CGPointMake(WIDTH / 2.0, HEIGHT / 2.0);
+    _doorLayer.anchorPoint = CGPointMake(0, 0.5);
+    _doorLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:_doorLayer];
     
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = -1.0/500;
@@ -39,7 +42,19 @@
     animation.duration = 2.0;
     animation.repeatDuration = INFINITY;
     animation.autoreverses = YES;
-    [doorLayer addAnimation:animation forKey:nil];
+    [_doorLayer addAnimation:animation forKey:nil];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:pan];
+}
+
+- (void)pan:(UIPanGestureRecognizer *)pan
+{
+    CGFloat x = [pan translationInView:self.view].x;
+    CFTimeInterval timeOffSet = _doorLayer.timeOffset;
+    timeOffSet = MIN(0.999, MAX(0.0, timeOffSet - x));
+    _doorLayer.timeOffset = timeOffSet;
+    [pan setTranslation:CGPointZero inView:self.view];
 }
 
 @end

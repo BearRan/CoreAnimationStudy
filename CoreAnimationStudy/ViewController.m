@@ -74,6 +74,9 @@
                      //Chapter9
                      @"DurationAndRepetionTestVC",
                      @"DoorAutoReserveTestVC",
+                     
+                     //Chapter10
+                     @"ChangeColorTestVC",
                      ];
 }
 

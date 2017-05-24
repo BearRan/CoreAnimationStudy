@@ -23,6 +23,7 @@
 		09913A821EC932D7001BC279 /* CustomTransitionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09913A811EC932D7001BC279 /* CustomTransitionTestVC.m */; };
 		0999B8AC1ECBD27300D9F241 /* DurationAndRepetionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0999B8AB1ECBD27300D9F241 /* DurationAndRepetionTestVC.m */; };
 		0999B8AF1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */; };
+		09E9660C1ED50D7500AFC47F /* ChangeColorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9660B1ED50D7500AFC47F /* ChangeColorTestVC.m */; };
 		09F7709F1EB175C3003A62A9 /* CubicLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */; };
 		09F770A21EB2C920003A62A9 /* CAScrolLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A11EB2C920003A62A9 /* CAScrolLayerTestVC.m */; };
 		09F770A51EB2C939003A62A9 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F770A41EB2C939003A62A9 /* ScrollView.m */; };
@@ -88,6 +89,8 @@
 		0999B8AB1ECBD27300D9F241 /* DurationAndRepetionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DurationAndRepetionTestVC.m; sourceTree = "<group>"; };
 		0999B8AD1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorAutoReserveTestVC.h; sourceTree = "<group>"; };
 		0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorAutoReserveTestVC.m; sourceTree = "<group>"; };
+		09E9660A1ED50D7500AFC47F /* ChangeColorTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorTestVC.h; sourceTree = "<group>"; };
+		09E9660B1ED50D7500AFC47F /* ChangeColorTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorTestVC.m; sourceTree = "<group>"; };
 		09F7709D1EB175C3003A62A9 /* CubicLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicLayerTestVC.h; sourceTree = "<group>"; };
 		09F7709E1EB175C3003A62A9 /* CubicLayerTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicLayerTestVC.m; sourceTree = "<group>"; };
 		09F770A01EB2C920003A62A9 /* CAScrolLayerTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrolLayerTestVC.h; sourceTree = "<group>"; };
@@ -199,6 +202,15 @@
 				0999B8AE1ECBD7EA00D9F241 /* DoorAutoReserveTestVC.m */,
 			);
 			path = Chapter9;
+			sourceTree = "<group>";
+		};
+		09E966091ED50D5800AFC47F /* Chapter10Easing */ = {
+			isa = PBXGroup;
+			children = (
+				09E9660A1ED50D7500AFC47F /* ChangeColorTestVC.h */,
+				09E9660B1ED50D7500AFC47F /* ChangeColorTestVC.m */,
+			);
+			path = Chapter10Easing;
 			sourceTree = "<group>";
 		};
 		09FAC1A91EA593700064D100 /* Chapter6 */ = {
@@ -319,6 +331,7 @@
 				09FAC1A91EA593700064D100 /* Chapter6 */,
 				096FCADE1EBFFAC300A5D8AC /* Chapter7 */,
 				0999B8A91ECBD25200D9F241 /* Chapter9 */,
+				09E966091ED50D5800AFC47F /* Chapter10Easing */,
 				18D8B6451DDA984400C6545D /* Main.storyboard */,
 				18D8B6481DDA984400C6545D /* Assets.xcassets */,
 				18D8B64A1DDA984400C6545D /* LaunchScreen.storyboard */,
@@ -505,6 +518,7 @@
 				096FCA001EBC02ED00A5D8AC /* CAEaglLayerTestVC.m in Sources */,
 				09FAC1FC1EA989A80064D100 /* CATransform3DTest3VC.m in Sources */,
 				096FCAFA1EC1446D00A5D8AC /* CustomActionTestVC.m in Sources */,
+				09E9660C1ED50D7500AFC47F /* ChangeColorTestVC.m in Sources */,
 				18D8B6411DDA984400C6545D /* AppDelegate.m in Sources */,
 				1831CB541E30FD7900CBC21F /* ContentImageViewController.m in Sources */,
 				09FAC1B51EA5977C0064D100 /* ReflectionView.m in Sources */,
