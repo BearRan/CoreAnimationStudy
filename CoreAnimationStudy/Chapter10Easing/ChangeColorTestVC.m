@@ -59,7 +59,7 @@
     
     [_colorLayer addAnimation:animation forKey:nil];
     
-    _colorLayer.geometryFlipped
+//    _colorLayer.geometryFlipped
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path applyTransform:CGAffineTransformMakeScale(200, 200)];
 }

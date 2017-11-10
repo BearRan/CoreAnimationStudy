@@ -49,7 +49,7 @@
 {
     CATransition *transition = [CATransition animation];
     transition.duration = 2.0;
-    transition.type = kCATransitionReveal;
+    transition.type = kCATransitionFade;
     
     [_imageView.layer addAnimation:transition forKey:nil];
     

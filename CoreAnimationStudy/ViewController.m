@@ -61,15 +61,15 @@
 //                     @"AVPlayerTestVC",
                      
                      //Chapter7
-//                     @"LayerChangeColorTestVC",
-//                     @"LayerBehaviorTestVC",
-//                     @"CustomActionTestVC",
-//                     @"PresentationLayerTestVC",
-//                     @"SpaceShipTestVC",
-//                     @"ImageTransitionTestVC",
-//                     @"ViewTransitionTestVC",
-//                     @"CustomTransitionTestVC",
-//                     @"CancelAnimationTestVC",
+                     @"LayerChangeColorTestVC",
+                     @"LayerBehaviorTestVC",
+                     @"CustomActionTestVC",
+                     @"PresentationLayerTestVC",
+                     @"SpaceShipTestVC",
+                     @"ImageTransitionTestVC",
+                     @"ViewTransitionTestVC",
+                     @"CustomTransitionTestVC",
+                     @"CancelAnimationTestVC",
                      
                      //Chapter9
                      @"DurationAndRepetionTestVC",
